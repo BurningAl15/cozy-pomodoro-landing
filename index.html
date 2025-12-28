@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Meta Tags -->
+    <title>Cozy Pomodoro - Focus Comfortably</title>
+    <meta name="description"
+        content="A simple, cozy Pomodoro timer for calm productivity. Full experience is free. No ads, no subscriptions.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cozypomodoro.com/">
+    <meta property="og:title" content="Cozy Pomodoro - Focus Comfortably">
+    <meta property="og:description"
+        content="The minimal Pomodoro timer for calm productivity. Full experience is free. No ads.">
+    <meta property="og:image" content="assets/app_mockup_version_1_real.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cozypomodoro.com/">
+    <meta property="twitter:title" content="Cozy Pomodoro - Focus Comfortably">
+    <meta property="twitter:description"
+        content="The minimal Pomodoro timer for calm productivity. Full experience is free. No ads.">
+    <meta property="twitter:image" content="assets/app_mockup_version_1_real.png">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="sticky-cta hidden">
+        <a href="https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro" target="_blank"
+            class="sticky-btn primary" data-i18n="download">Download</a>
+        <a href="#theme-pack" class="sticky-btn secondary" data-i18n="themes">Themes</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header container">
+        <a href="#" class="logo">
+            <img src="assets/logo.png" alt="Cozy Pomodoro Logo" style="height: 48px; width: 48px;">
+            <span>CozyPomodoro</span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="#theme-pack" class="nav-link" data-i18n="nav_themes">Theme Pack</a>
+            <a href="#privacy" class="nav-link" data-i18n="nav_privacy">Privacy</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge-soft" data-i18n="version_badge">✨ v1.0 Available Now</span>
+                <h1 class="hero-title" data-i18n="hero_title">Focus comfortably.</h1>
+                <p class="hero-subtitle">
+                    <span data-i18n="hero_subtitle">The minimal Pomodoro timer for calm productivity.</span> <br>
+                    <strong data-i18n="hero_subtitle_bold">Full experience is free. Themes optional.</strong>
+                </p>
+                <div class="hero-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
+                        target="_blank" class="cta-button primary" data-i18n="cta_download">Download App</a>
+                    <a href="#theme-pack" class="cta-button secondary" data-i18n="cta_explore">Explore Themes</a>
+                </div>
+                <p class="hero-note" data-i18n="hero_note">Available on Android • No Ads • Privacy First</p>
+
+                <!-- Theme Switcher -->
+                <div class="theme-switcher-mini">
+                    <p class="theme-label-sm" data-i18n="try_theme">Try a style:</p>
+                    <div class="theme-buttons">
+                        <button class="theme-btn" data-theme="cozyLight" title="Cozy Light"
+                            style="background-color: #ff5722;"></button>
+                        <button class="theme-btn" data-theme="cozyDark" title="Cozy Dark"
+                            style="background-color: #333; border: 1px solid #555;"></button>
+                        <button class="theme-btn" data-theme="nature" title="Nature"
+                            style="background-color: #2E4033;"></button>
+                        <button class="theme-btn" data-theme="pastel" title="Pastel"
+                            style="background-color: #FFB7B2;"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/app_mockup_version_1_real.png" alt="Cozy Pomodoro App"
+                    class="hero-mockup animate-float">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlights (Replaced Social Proof) -->
+    <section class="social-proof container reveal">
+        <p data-i18n="early_adopter">Join the first users discovering calm focus.</p>
+    </section>
+
+    <!-- How It Works & Benefits -->
+    <section class="section container">
+        <div class="section-header text-center reveal">
+            <h2 data-i18n="how_title">Simple by Design</h2>
+            <p data-i18n="how_subtitle">No clutter. Just flow.</p>
+        </div>
+
+        <div class="steps-grid reveal">
+            <div class="step-card">
+                <div class="step-icon">🎯</div>
+                <h3 data-i18n="step1_title">1. Pick a Task</h3>
+                <p data-i18n="step1_desc">Decide what needs to be done.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">⏱️</div>
+                <h3 data-i18n="step2_title">2. Start Timer</h3>
+                <p data-i18n="step2_desc">Focus for 25 minutes (or customize).</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">☕</div>
+                <h3 data-i18n="step3_title">3. Relax</h3>
+                <p data-i18n="step3_desc">Take a short cozy break.</p>
+            </div>
+        </div>
+
+        <div class="benefits-list reveal">
+            <div class="benefit-item">
+                <span class="check-icon">✓</span> <span data-i18n="benefit1">No Ads or Distractions</span>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✓</span> <span data-i18n="benefit2">Works Offline</span>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✓</span> <span data-i18n="benefit3">100% Privacy Friendly</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Pack Section -->
+    <section id="theme-pack" class="section theme-pack-section">
+        <div class="container">
+            <div class="theme-pack-grid reveal">
+                <div class="theme-showcase">
+                    <!-- Carousel -->
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <img src="assets/app_mockup_version_1_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_2_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_3_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_4_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_5_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_6_real.png" class="carousel-img">
+                            <!-- Duplicate for loop -->
+                            <img src="assets/app_mockup_version_1_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_2_real.png" class="carousel-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theme-pricing">
+                    <span class="badge-premium" data-i18n="premium_badge">Premium Pack</span>
+                    <h2 data-i18n="premium_title">Make it yours.</h2>
+                    <p class="pricing-desc" data-i18n="premium_desc">Unlock the full collection of cozy themes to match
+                        your mood, time of day, or aesthetic.</p>
+
+                    <div class="pricing-card">
+                        <div class="price">
+                            <span class="currency">$</span>3.99
+                        </div>
+                        <span class="period" data-i18n="one_time">one-time</span>
+
+                        <ul class="pricing-features">
+                            <li>🎨 <span data-i18n="feat_themes">8+ Premium Themes</span></li>
+                            <li>🌧️ <span data-i18n="feat_weather">Dynamic Weather Effects</span></li>
+                            <li>✨ <span data-i18n="feat_support">Support Indie Development</span></li>
+                            <li class="faded">🚫 <span data-i18n="feat_no_sub">No Subscriptions</span></li>
+                            <li class="faded">🔓 <span data-i18n="feat_no_lock">No Locked Features</span></li>
+                        </ul>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
+                            target="_blank" class="cta-button primary full-width" data-i18n="get_pack">Get Theme
+                            Pack</a>
+                        <p class="guarantee-text" data-i18n="guarantee">Purely cosmetic. App remains free forever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Replacement (Feature Cards) -->
+    <section class="section container">
+        <div class="testimonials-grid reveal">
+            <div class="testimonial-card">
+                <p>Designed for <strong style="color:var(--primary-color);">Flow</strong></p>
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="feature_card_1">Minimalist interface designed to
+                    keep you in the zone.</p>
+            </div>
+            <div class="testimonial-card">
+                <p>Designed for <strong style="color:var(--primary-color);">Calm</strong></p>
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="feature_card_2">Soothing colors and sounds to
+                    reduce anxiety.</p>
+            </div>
+            <div class="testimonial-card">
+                <p>Designed for <strong style="color:var(--primary-color);">You</strong></p>
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="feature_card_3">Fully customizable timer settings
+                    and themes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section container faq-section reveal">
+        <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary data-i18n="faq1_q">Is the app free?</summary>
+                <p data-i18n="faq1_a">Yes! The core Pomodoro timer, stats, and standard features are 100% free with no
+                    ads.</p>
+            </details>
+            <details class="faq-item">
+                <summary data-i18n="faq2_q">What plays in the Theme Pack?</summary>
+                <p data-i18n="faq2_a">The Theme Pack is a one-time purchase of $3.99 that unlocks all premium color
+                    themes and weather animations. It is purely cosmetic.</p>
+            </details>
+            <details class="faq-item">
+                <summary data-i18n="faq3_q">Is there a subscription?</summary>
+                <p data-i18n="faq3_a">No. We hate subscriptions too. You pay once for the Theme Pack and keep it
+                    forever.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer & Languages -->
+    <footer class="footer container">
+        <div class="languages-list" style="margin-bottom: 2rem;">
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="es">Español</button>
+            <button class="lang-btn" data-lang="fr">Français</button>
+            <button class="lang-btn" data-lang="de">Deutsch</button>
+            <button class="lang-btn" data-lang="it">Italiano</button>
+            <button class="lang-btn" data-lang="pt">Português</button>
+            <button class="lang-btn" data-lang="ja">日本語</button>
+            <button class="lang-btn" data-lang="ko">한국어</button>
+        </div>
+
+        <div class="footer-links">
+            <a href="#privacy" data-i18n="privacy">Privacy Policy</a>
+            <a href="#credits" data-i18n="credits">Credits</a>
+        </div>
+
+        <p class="copyright">
+            Made with <span style="color:red;">&hearts;</span> by <a href="#" style="font-weight: bold;">Aldhair
+                Vera</a> <br>
+            &copy; 2025 Cozy Pomodoro.
+        </p>
+    </footer>
+
+    <!-- Cozy Radio Preview Widget -->
+    <div class="radio-widget">
+        <div class="radio-header">
+            <span style="font-size: 1.2rem;">🎵</span> <span style="font-weight: 600;">Cozy Radio Preview</span>
+        </div>
+        <div class="radio-player">
+            <div class="track-info">
+                <span id="track-name">Loading...</span>
+                <span id="track-artist" class="track-artist"></span>
+            </div>
+            <button id="play-pause-btn" class="play-btn">▶</button>
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
+
+    <div id="privacy" style="display:none;"></div>
+    <div id="credits" style="display:none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
