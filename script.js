@@ -109,7 +109,10 @@ const translations = {
         privacy: "Privacy Policy",
         feature_card_1: "Minimalist interface designed to keep you in the zone.",
         feature_card_2: "Soothing colors and sounds to reduce anxiety.",
-        feature_card_3: "Fully customizable timer settings and themes."
+        feature_card_3: "Fully customizable timer settings and themes.",
+        design_flow: "Designed for <strong style='color:var(--primary-color);'>Flow</strong>",
+        design_calm: "Designed for <strong style='color:var(--primary-color);'>Calm</strong>",
+        design_you: "Designed for <strong style='color:var(--primary-color);'>You</strong>"
     },
     es: {
         download: "Descargar",
@@ -150,16 +153,19 @@ const translations = {
         guarantee: "Puramente cosmético. La app es gratis para siempre.",
         faq_title: "Preguntas Frecuentes",
         faq1_q: "¿La app es gratis?",
-        faq1_a: "¡Sí! El temporizador Pomodoro y las estadísticas son 100% gratis y sin anuncios.",
+        faq1_a: "¡Sí! La aplicación funciona genial gratis y sin anuncios.",
         faq2_q: "¿Qué incluye el Pack?",
-        faq2_a: "El Pack de Temas es una compra única de $3.99 que desbloquea todos los colores y climas.",
+        faq2_a: "El Pack de Temas desbloquea todos los temas, con animaciones, fondos y looks únicos por $3.99.",
         faq3_q: "¿Hay suscripción?",
         faq3_a: "No. Odiamos las suscripciones. Pagas una vez y es tuyo para siempre.",
         credits: "Créditos",
         privacy: "Política de Privacidad",
         feature_card_1: "Interfaz minimalista diseñada para mantenerte en la zona.",
         feature_card_2: "Colores y sonidos relajantes para reducir la ansiedad.",
-        feature_card_3: "Configuraciones de temporizador y temas totalmente personalizables."
+        feature_card_3: "Configuraciones de temporizador y temas totalmente personalizables.",
+        design_flow: "Diseñado para <strong style='color:var(--primary-color);'>Fluir</strong>",
+        design_calm: "Diseñado para la <strong style='color:var(--primary-color);'>Calma</strong>",
+        design_you: "Diseñado para <strong style='color:var(--primary-color);'>Ti</strong>"
     },
     fr: {
         download: "Télécharger",
@@ -495,9 +501,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) {
-                el.innerText = dict[key];
+                el.innerHTML = dict[key];
             } else if (translations['en'][key]) {
-                el.innerText = translations['en'][key]; // Fallback
+                el.innerHTML = translations['en'][key]; // Fallback
             }
         });
 
@@ -513,8 +519,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Default Language
-    setLanguage('en');
+    // Auto-Language Detection
+    function detectLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        const shortLang = browserLang.split('-')[0]; // Simplify 'en-US' to 'en'
+
+        console.log(`Detected Language: ${browserLang} -> ${shortLang}`);
+
+        if (translations[shortLang]) {
+            setLanguage(shortLang);
+        } else {
+            console.log("Language not supported, falling back to English.");
+            setLanguage('en');
+        }
+    }
+
+    // Initialize with Detection
+    detectLanguage();
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
