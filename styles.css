@@ -176,6 +176,7 @@ ul {
 .hero-title {
   font-size: 3rem;
   line-height: 1.1;
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-md);
   color: var(--text-main);
   letter-spacing: -0.03em;

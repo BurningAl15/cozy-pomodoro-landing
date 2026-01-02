@@ -98,6 +98,8 @@ const translations = {
         feat_no_lock: "No Locked Features",
         get_pack: "Get Theme Pack",
         guarantee: "Purely cosmetic. App remains free forever.",
+        whats_new: "✨ What's New in",
+        release_notes_latest: "🔥 Streak Celebration (Flame & Confetti) <br> 🌍 Full Localization (8 Langs) <br> 📱 Mobile UI Polish <br> 🔊 Loud Alarms (100%) <br> 🛠️ Android 15 Support",
         faq_title: "Frequently Asked Questions",
         faq1_q: "Is the app free?",
         faq1_a: "Yes! The core Pomodoro timer, stats, and standard features are 100% free with no ads.",
@@ -150,7 +152,9 @@ const translations = {
         feat_no_sub: "Sin Suscripciones",
         feat_no_lock: "Sin Funciones Bloqueadas",
         get_pack: "Obtener Pack de Temas",
-        guarantee: "Puramente cosmético. La app es gratis para siempre.",
+        guarantee: "Puramente cosmético. La app es gratis siempre.",
+        whats_new: "✨ Novedades en",
+        release_notes_latest: "🔥 Celebración de Racha (Llama y Confeti) <br> 🌍 Localización Completa (8 Idiomas) <br> 📱 Mejoras UI Móvil <br> 🔊 Alarmas Fuertes (100%) <br> 🛠️ Soporte Android 15",
         faq_title: "Preguntas Frecuentes",
         faq1_q: "¿La app es gratis?",
         faq1_a: "¡Sí! La aplicación funciona genial gratis y sin anuncios.",
@@ -203,6 +207,8 @@ const translations = {
         feat_no_lock: "Pas de fonctionnalités bloquées",
         get_pack: "Obtenir le Pack",
         guarantee: "Purement cosmétique. L'appli reste gratuite.",
+        whats_new: "✨ Quoi de neuf en",
+        release_notes_latest: "🔥 Célébration de Série (Flamme et Confettis) <br> 🌍 Traduction Complète (8 Langues) <br> 📱 UI Mobile Améliorée <br> 🔊 Alarmes Fortes (100%) <br> 🛠️ Support Android 15",
         faq_title: "Questions Fréquentes",
         faq1_q: "L'appli est-elle gratuite ?",
         faq1_a: "Oui ! Le minuteur Pomodoro de base est 100% gratuit sans publicité.",
@@ -252,6 +258,8 @@ const translations = {
         feat_no_lock: "Keine gesperrten Funktionen",
         get_pack: "Paket Hinzufügen",
         guarantee: "Rein kosmetisch. App bleibt kostenlos.",
+        whats_new: "✨ Neu in",
+        release_notes_latest: "🔥 Serie-Feier (Flamme & Konfetti) <br> 🌍 Vollständige Übersetzung (8 Sprachen) <br> 📱 Mobile UI Politur <br> 🔊 Laute Alarme (100%) <br> 🛠️ Android 15 Support",
         faq_title: "Häufige Fragen",
         faq1_q: "Ist die App kostenlos?",
         faq1_a: "Ja! Der Kern-Pomodoro-Timer ist 100% kostenlos.",
@@ -301,6 +309,8 @@ const translations = {
         feat_no_lock: "Nessuna Funzione Bloccata",
         get_pack: "Ottieni Pacchetto",
         guarantee: "Puramente cosmetico. L'app rimane gratuita.",
+        whats_new: "✨ Novità in",
+        release_notes_latest: "🔥 Celebrazione Serie (Fiamma e Coriandoli) <br> 🌍 Localizzazione Completa (8 Lingue) <br> 📱 Miglioramenti UI Mobile <br> 🔊 Allarmi Forti (100%) <br> 🛠️ Supporto Android 15",
         faq_title: "Domande Frequenti",
         faq1_q: "L'app è gratuita?",
         faq1_a: "Sì! Il timer Pomodoro base è gratuito al 100%.",
@@ -350,6 +360,8 @@ const translations = {
         feat_no_lock: "Sem Bloqueios",
         get_pack: "Obter Pacote",
         guarantee: "Puramente cosmético. App grátis para sempre.",
+        whats_new: "✨ Novidades na",
+        release_notes_latest: "🔥 Celebração de Sequência (Chama e Confete) <br> 🌍 Tradução Completa (8 Idiomas) <br> 📱 Melhorias na UI Móvel <br> 🔊 Alarmes Altos (100%) <br> 🛠️ Suporte Android 15",
         faq_title: "Perguntas Frequentes",
         faq1_q: "O app é grátis?",
         faq1_a: "Sim! O timer Pomodoro é 100% grátis.",
@@ -399,6 +411,8 @@ const translations = {
         feat_no_lock: "機能制限なし",
         get_pack: "パックを入手",
         guarantee: "見た目だけです。アプリはずっと無料。",
+        whats_new: "✨ 新機能",
+        release_notes_latest: "🔥 ストリークの祭典 (炎と紙吹雪) <br> 🌍 完全ローカライズ (8言語) <br> 📱 モバイルUIの改善 <br> 🔊 大音量アラーム (100%) <br> 🛠️ Android 15 対応",
         faq_title: "よくある質問",
         faq1_q: "無料ですか？",
         faq1_a: "はい！基本機能は100%無料です。",
@@ -448,6 +462,8 @@ const translations = {
         feat_no_lock: "기능 제한 없음",
         get_pack: "테마 팩 받기",
         guarantee: "꾸미기 전용입니다. 앱은 평생 무료입니다.",
+        whats_new: "✨ 새로운 기능",
+        release_notes_latest: "🔥 연속 달성 축하 (불꽃 & 폭죽) <br> 🌍 전체 언어 지원 (8개국어) <br> 📱 모바일 UI 개선 <br> 🔊 큰 알람 소리 (100%) <br> 🛠️ Android 15 지원",
         faq_title: "자주 묻는 질문",
         faq1_q: "무료인가요?",
         faq1_a: "네! 기본 타이머 기능은 100% 무료입니다.",
@@ -654,6 +670,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Dynamic Release Info
+    fetch('assets/release_info.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.version) {
+                const versionBadge = document.querySelector('.badge-soft');
+                if (versionBadge) {
+                    // Update text, preserving the sparkles if desired, or just replace
+                    // Current format: "✨ v1.0.2 Available Now"
+                    // New format: "✨ v[VERSION] - [HIGHLIGHTS]"
+                    versionBadge.textContent = `✨ v${data.version.split('+')[0]} - ${data.highlights}`;
+                }
+
+                // Update translations object in memory for current session consistency if user switches lang
+                // Note: This is a simple override. For full multi-lang support of dynamic content, 
+                // we'd need the JSON to have langs or just use English/Universal text for version.
+                Object.keys(translations).forEach(lang => {
+                    if (translations[lang].version_badge) {
+                        translations[lang].version_badge = `✨ v${data.version.split('+')[0]} - ${data.highlights}`;
+                    }
+                });
+            }
+        })
+        .catch(err => console.log('Release info not found, using default.'));
 
     console.log("Cozy Pomodoro Landing Page - Fixed Loaded ✨");
 });
