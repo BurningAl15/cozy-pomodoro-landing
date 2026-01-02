@@ -683,7 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update text, preserving the sparkles if desired, or just replace
                     // Current format: "✨ v1.0.2 Available Now"
                     // New format: "✨ v[VERSION] - [HIGHLIGHTS]"
-                    versionBadge.textContent = `✨ v${data.version.split('+')[0]} - ${data.highlights}`;
+                    versionBadge.textContent = `✨ v${data.version.split('+')[0]}`;
                 }
 
                 // Update translations object in memory for current session consistency if user switches lang
