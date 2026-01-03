@@ -114,7 +114,10 @@ const translations = {
         feature_card_3: "Fully customizable timer settings and themes.",
         design_flow: "Designed for <strong style='color:var(--primary-color);'>Flow</strong>",
         design_calm: "Designed for <strong style='color:var(--primary-color);'>Calm</strong>",
-        design_you: "Designed for <strong style='color:var(--primary-color);'>You</strong>"
+        design_you: "Designed for <strong style='color:var(--primary-color);'>You</strong>",
+        new_badge: "🔥 New in v1.1.1",
+        critical_title: "Critical Updates Engine",
+        critical_desc: "We've built a robust new engine to deliver critical updates instantly. This paves the way for exciting upcoming features and ensures your app stays secure and compatible."
     },
     es: {
         download: "Descargar",
@@ -169,7 +172,10 @@ const translations = {
         feature_card_3: "Configuraciones de temporizador y temas totalmente personalizables.",
         design_flow: "Diseñado para <strong style='color:var(--primary-color);'>Fluir</strong>",
         design_calm: "Diseñado para la <strong style='color:var(--primary-color);'>Calma</strong>",
-        design_you: "Diseñado para <strong style='color:var(--primary-color);'>Ti</strong>"
+        design_you: "Diseñado para <strong style='color:var(--primary-color);'>Ti</strong>",
+        new_badge: "🔥 Nuevo en v1.1.1",
+        critical_title: "Motor de Actualizaciones Críticas",
+        critical_desc: "Hemos construido un nuevo motor robusto para entregar actualizaciones críticas al instante. Esto prepara el camino para futuras funciones emocionantes y asegura que tu app se mantenga segura y compatible."
     },
     fr: {
         download: "Télécharger",
@@ -220,7 +226,10 @@ const translations = {
         privacy: "Politique de Confidentialité",
         feature_card_1: "Interface minimaliste pour rester dans la zone.",
         feature_card_2: "Couleurs et sons apaisants.",
-        feature_card_3: "Minuteur et thèmes entièrement personnalisables."
+        feature_card_3: "Minuteur et thèmes entièrement personnalisables.",
+        new_badge: "🔥 Nouveau dans la v1.1.1",
+        critical_title: "Moteur de Mises à Jour Critiques",
+        critical_desc: "Nous avons conçu un nouveau moteur robuste pour fournir des mises à jour critiques instantanément. Cela ouvre la voie à des fonctionnalités passionnantes et garantit la sécurité et la compatibilité de votre application."
     },
     de: {
         download: "Herunterladen",
@@ -271,7 +280,10 @@ const translations = {
         privacy: "Datenschutzerklärung",
         feature_card_1: "Minimalistisches Interface für Fokus.",
         feature_card_2: "Beruhigende Farben und Töne.",
-        feature_card_3: "Vollständig anpassbar."
+        feature_card_3: "Vollständig anpassbar.",
+        new_badge: "🔥 Neu in v1.1.1",
+        critical_title: "Kritische Update-Engine",
+        critical_desc: "Wir haben eine robuste neue Engine entwickelt, um kritische Updates sofort bereitzustellen. Dies ebnet den Weg für aufregende zukünftige Funktionen und sorgt dafür, dass Ihre App sicher und kompatibel bleibt."
     },
     it: {
         download: "Scarica",
@@ -322,7 +334,10 @@ const translations = {
         privacy: "Informativa Privacy",
         feature_card_1: "Interfaccia minimalista.",
         feature_card_2: "Colori e suoni rilassanti.",
-        feature_card_3: "Completamente personalizzabile."
+        feature_card_3: "Completamente personalizzabile.",
+        new_badge: "🔥 Nuovo nella v1.1.1",
+        critical_title: "Motore di Aggiornamenti Critici",
+        critical_desc: "Abbiamo costruito un nuovo motore robusto per fornire aggiornamenti critici istantaneamente. Questo apre la strada a funzionalità entusiasmanti e garantisce che la tua app rimanga sicura e compatibile."
     },
     pt: {
         download: "Baixar",
@@ -373,7 +388,10 @@ const translations = {
         privacy: "Política de Privacidade",
         feature_card_1: "Interface minimalista.",
         feature_card_2: "Cores e sons relaxantes.",
-        feature_card_3: "Totalmente personalizável."
+        feature_card_3: "Totalmente personalizável.",
+        new_badge: "🔥 Novo na v1.1.1",
+        critical_title: "Motor de Atualizações Críticas",
+        critical_desc: "Criamos um novo motor robusto para entregar atualizações críticas instantaneamente. Isso abre caminho para recursos empolgantes e garante que seu app permaneça seguro e compatível."
     },
     ja: {
         download: "ダウンロード",
@@ -424,7 +442,10 @@ const translations = {
         privacy: "プライバシーポリシー",
         feature_card_1: "集中するためのミニマルUI。",
         feature_card_2: "リラックスできる色と音。",
-        feature_card_3: "完全にカスタマイズ可能。"
+        feature_card_3: "完全にカスタマイズ可能。",
+        new_badge: "🔥 v1.1.1の新機能",
+        critical_title: "クリティカルアップデートエンジン",
+        critical_desc: "重要なアップデートを即座に配信するための堅牢な新しいエンジンを構築しました。これにより、今後のエキサイティングな機能への道が開かれ、アプリの安全性と互換性が確保されます。"
     },
     ko: {
         download: "다운로드",
@@ -475,7 +496,10 @@ const translations = {
         privacy: "개인정보 처리방침",
         feature_card_1: "몰입을 돕는 미니멀 인터페이스.",
         feature_card_2: "불안을 줄여주는 차분한 색상과 소리.",
-        feature_card_3: "타이머와 테마 완전 맞춤 설정."
+        feature_card_3: "타이머와 테마 완전 맞춤 설정.",
+        new_badge: "🔥 v1.1.1의 새로운 기능",
+        critical_title: "크리티컬 업데이트 엔진",
+        critical_desc: "중요한 업데이트를 즉시 제공하기 위해 강력한 새 엔진을 구축했습니다. 이는 흥미로운 미래 기능을 위한 길을 열고 앱의 보안과 호환성을 보장합니다."
     }
 };
 
