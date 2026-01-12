@@ -53,14 +53,6 @@ body {
   overflow-x: hidden;
   /* CRITICAL FIX: Prevent horizontal scroll globally */
   width: 100%;
-
-
-  /* Restored Clean Background */
-  background-color: var(--bg-color);
-
-
-
-
 }
 
 html {
@@ -429,43 +421,50 @@ ul {
 }
 
 /* Carousel Fix: STRICT Constraints for Desktop Overflow */
-/* Swiper Carousel Styles */
-.swiper {
+.carousel-container {
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* Fill parent */
+  max-width: 500px;
+  /* Limit visual width on desktop to prevent huge spread */
+  margin: 0 auto;
+  /* Center it */
+  padding: 20px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.swiper-slide {
-  width: 280px;
-  /* Slightly narrower for better mobile fit */
-  height: auto;
-  transition: transform 0.3s;
+/* Allow larger width on very small screens? No, stick to fluid */
+@media (min-width: 1024px) {
+  .carousel-container {
+    max-width: 600px;
+  }
+
+  /* Slightly larger on desktop but still contained */
 }
 
-/* Scale up the active slide slightly for focus effect */
-.swiper-slide-active {
-  transform: scale(1.05);
-  z-index: 10;
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.carousel-img {
+  height: 400px;
+  width: auto;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive adjustments for slide width */
-@media (min-width: 768px) {
-  .swiper-slide {
-    width: 320px;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-}
 
-@media (min-width: 1024px) {
-  .swiper-slide {
-    width: 380px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -579,7 +578,7 @@ ul {
 
 .feature-card-lg:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
 }
 
 .feature-icon {
@@ -589,7 +588,7 @@ ul {
   background: rgba(255, 255, 255, 0.5);
   padding: 12px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .feature-card-lg h3 {
@@ -1035,315 +1034,4 @@ ul {
     width: 100%;
     position: relative;
   }
-}
-
-/* --- Parallax & Mini-Timer (v1.2.0 Enhancements) --- */
-
-/* Parallax Layer */
-.parallax-layer {
-  position: absolute;
-  font-size: 3rem;
-  top: 50%;
-  left: 50%;
-  opacity: 0.8;
-  z-index: -1;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-  transition: transform 0.1s ease-out;
-}
-
-.layer-1 {
-  top: 10%;
-  left: 10%;
-  animation: float-slow 8s infinite alternate;
-}
-
-.layer-2 {
-  top: 20%;
-  right: 10%;
-  left: auto;
-  animation: float-slow 10s infinite alternate-reverse;
-  font-size: 2.5rem;
-}
-
-.layer-3 {
-  top: 70%;
-  left: -5%;
-  animation: float-slow 12s infinite alternate;
-  font-size: 4rem;
-}
-
-@keyframes float-slow {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(20px, -20px) rotate(10deg);
-  }
-}
-
-/* Mini Timer Widget */
-.mini-timer-container {
-  margin-bottom: var(--spacing-md);
-}
-
-.mini-timer {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-pill);
-  padding: 8px 16px 8px 24px;
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.mini-timer:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-#mini-time-display {
-  font-family: monospace;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -1px;
-}
-
-.mini-play-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-}
-
-.mini-play-btn:hover {
-  background: var(--primary-hover);
-}
-
-.mini-timer-label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-top: 8px;
-  opacity: 0.8;
-}
-
-/* Staggered Animations */
-.reveal.stagger-1 {
-  transition-delay: 0.1s;
-}
-
-.reveal.stagger-2 {
-  transition-delay: 0.2s;
-}
-
-.reveal.stagger-3 {
-  transition-delay: 0.3s;
-}
-
-/* Lightbox Modal */
-.lightbox-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.lightbox-modal.active {
-  display: flex;
-}
-
-.lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  animation: lightbox-zoom 0.3s ease;
-}
-
-@keyframes lightbox-zoom {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.lightbox-close:hover {
-  transform: scale(1.2);
-}
-
-/* Clickable Image Overlay */
-.clickable-image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.clickable-image-container .image-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-  color: white;
-  padding: 12px;
-  font-size: 0.8rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.clickable-image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-.clickable-image-container:hover {
-  transform: scale(1.02);
-  transition: transform 0.2s;
-}
-/* Privacy Modal Styles */
-.privacy-modal-card {
-    background: var(--surface-color);
-    width: 90%;
-    max-width: 800px;
-    padding: 40px;
-    border-radius: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    position: relative;
-    max-height: 85vh;
-    overflow-y: auto;
-    margin-bottom: 50px; /* Space at bottom for mobile */
-}
-
-/* Scrollbar for privacy modal */
-.privacy-modal-card::-webkit-scrollbar {
-    width: 8px;
-}
-.privacy-modal-card::-webkit-scrollbar-track {
-    background: transparent;
-}
-.privacy-modal-card::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 4px;
-}
-
-/* Privacy Text Headers */
-#privacy-text h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-#privacy-text h2 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-#privacy-text ul {
-    padding-left: 20px;
-    margin-bottom: 1rem;
-}
-#privacy-text li {
-    margin-bottom: 0.5rem;
-}
-
-/* Enhanced Modal Styling (Privacy & Credits) */
-.privacy-modal-card {
-    background: var(--surface-color);
-    width: 90%;
-    max-width: 700px;
-    padding: 3rem;
-    border-radius: 32px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15); /* Softer shadow */
-    border: 1px solid var(--border-color);
-    margin: 5vh auto;
-    position: relative;
-    font-family: 'Outfit', sans-serif; /* Ensure font matches */
-}
-
-/* Modal Typography Override */
-#privacy-text h1, #credits-text h1 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-#privacy-text h2, #credits-text h2 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: var(--text-main);
-    margin-top: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-#privacy-text p, #privacy-text li, 
-#credits-text p, #credits-text li {
-    font-size: 1.05rem;
-    color: var(--text-muted); /* Softer text color */
-    line-height: 1.7;
-}
-
-/* Credits Specific Styling */
-.credit-section {
-    margin-bottom: 2.5rem;
-    padding: 1.5rem;
-    background: var(--surface-raised); /* Slight card effect */
-    border-radius: 20px;
-    text-align: center;
-}
-.credit-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-.credit-section a {
-    color: var(--primary-color);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
-}
-.credit-section a:hover {
-    border-bottom-color: var(--primary-color);
 }

@@ -27,8 +27,6 @@
     <meta property="twitter:image" content="assets/app_mockup_version_1_real.png">
 
     <link rel="stylesheet" href="styles.css">
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -103,28 +101,6 @@
                         style="font-size: 0.95rem; line-height: 1.6;">
                         <!-- Content loaded by script.js -->
                     </p>
-
-                    <!-- Merged Critical Updates Section -->
-                    <div
-                        style="margin-top: 2rem; padding-top: 1.5rem; padding-bottom: 1.5rem; border-top: 1px dashed var(--border-color);">
-                        <h3 style="margin-bottom: 0.8rem; color: var(--text-main); font-size: 1.2rem;"
-                            data-i18n="critical_title">Critical Updates Engine</h3>
-                        <p style="margin-bottom: 1.5rem; opacity: 0.85; font-size: 0.95rem; line-height: 1.6;"
-                            data-i18n="critical_desc">
-                            We've built a robust new engine to deliver critical updates instantly.
-                            This paves the way for exciting upcoming features and ensures your app stays secure and
-                            compatible.
-                        </p>
-
-                        <div class="clickable-image-container" onclick="openLightbox('assets/ForceUpdate.jpeg')"
-                            style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); cursor: pointer; position: relative; max-width: 300px; margin: 0 auto; padding: 12px; background: var(--surface-raised);">
-                            <img src="assets/ForceUpdate.jpeg" alt="Force Update Feature"
-                                style="display: block; width: 100%; height: auto; border-radius: 8px;">
-                            <div class="image-overlay" style="border-radius: 16px;">
-                                <span>🔍 Click to enlarge</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </details>
         </div>
@@ -135,7 +111,23 @@
         <p data-i18n="early_adopter">Join the first users discovering calm focus.</p>
     </section>
 
-
+    <!-- New Feature Highlight: Critical Updates Engine -->
+    <section class="section container reveal" style="padding-top: 2rem;">
+        <div
+            style="background: var(--surface-color); border-radius: 24px; padding: 2rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="badge-soft">✨ v1.2.0</span>
+            <h2 style="margin-bottom: 1rem;" data-i18n="critical_title">Critical Updates Engine</h2>
+            <p style="margin-bottom: 2rem; opacity: 0.8; max-width: 600px;" data-i18n="critical_desc">
+                We've built a robust new engine to deliver critical updates instantly.
+                This paves the way for exciting upcoming features and ensures your app stays secure and compatible.
+            </p>
+            <div
+                style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;">
+                <img src="assets/ForceUpdate.jpeg" alt="Force Update Feature"
+                    style="display: block; width: 100%; max-width: 500px; height: auto;">
+            </div>
+        </div>
+    </section>
 
     <!-- New V1.2.0 Features Showcase -->
     <section class="section container reveal" style="padding-top: 1rem;">
@@ -213,23 +205,18 @@
             <div class="theme-pack-grid reveal">
                 <div class="theme-showcase">
                     <!-- Carousel -->
-                    <!-- Carousel (Swiper.js) -->
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_1_real.png" alt="Theme 1">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_2_real.png" alt="Theme 2">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_3_real.png" alt="Theme 3">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_4_real.png" alt="Theme 4">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_5_real.png" alt="Theme 5">
-                            </div>
-                            <div class="swiper-slide"><img src="assets/app_mockup_version_6_real.png" alt="Theme 6">
-                            </div>
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <img src="assets/app_mockup_version_1_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_2_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_3_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_4_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_5_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_6_real.png" class="carousel-img">
+                            <!-- Duplicate for loop -->
+                            <img src="assets/app_mockup_version_1_real.png" class="carousel-img">
+                            <img src="assets/app_mockup_version_2_real.png" class="carousel-img">
                         </div>
-                        <!-- Optional: Pagination if desired, but for infinite loop maybe not needed. Keeping it clean. -->
                     </div>
                 </div>
 
@@ -257,40 +244,6 @@
                             target="_blank" class="cta-button primary full-width" data-i18n="get_pack">Get Theme
                             Pack</a>
                         <p class="guarantee-text" data-i18n="guarantee">Purely cosmetic. App remains free forever.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Themes v1.2.0 Section -->
-    <section class="section container reveal">
-        <div class="new-themes-section"
-            style="background: var(--surface-color); border-radius: 24px; padding: 2rem; border: 1px solid var(--border-color);">
-            <div style="text-align: center; margin-bottom: 1.5rem;">
-                <span class="badge-soft">🎨 v1.2.0</span>
-                <h2 data-i18n="new_themes_title" style="margin-bottom: 0.5rem;">New Themes</h2>
-                <p data-i18n="new_themes_desc" style="opacity: 0.8; max-width: 500px; margin: 0 auto;">Check out the
-                    latest additions to our theme collection.</p>
-            </div>
-            <div class="new-themes-gallery"
-                style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <div class="clickable-image-container"
-                    onclick="openLightbox(document.getElementById('theme-img-1').src)"
-                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); cursor: pointer;">
-                    <img id="theme-img-1" src="assets/NewThemes_1.2/EN_1.jpeg" alt="New Theme Preview 1"
-                        style="display: block; width: 180px; height: auto;">
-                    <div class="image-overlay">
-                        <span>🔍 Click to enlarge</span>
-                    </div>
-                </div>
-                <div class="clickable-image-container"
-                    onclick="openLightbox(document.getElementById('theme-img-2').src)"
-                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); cursor: pointer;">
-                    <img id="theme-img-2" src="assets/NewThemes_1.2/EN_2.jpeg" alt="New Theme Preview 2"
-                        style="display: block; width: 180px; height: auto;">
-                    <div class="image-overlay">
-                        <span>🔍 Click to enlarge</span>
                     </div>
                 </div>
             </div>
@@ -343,24 +296,23 @@
     <!-- Footer & Languages -->
     <footer class="footer container">
         <div class="languages-list" style="margin-bottom: 2rem;">
-            <button class="lang-btn" data-lang="en">🇺🇸 English</button>
-            <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
-            <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
-            <button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
-            <button class="lang-btn" data-lang="it">🇮🇹 Italiano</button>
-            <button class="lang-btn" data-lang="pt">🇧🇷 Português</button>
-            <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
-            <button class="lang-btn" data-lang="ko">🇰🇷 한국어</button>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="es">Español</button>
+            <button class="lang-btn" data-lang="fr">Français</button>
+            <button class="lang-btn" data-lang="de">Deutsch</button>
+            <button class="lang-btn" data-lang="it">Italiano</button>
+            <button class="lang-btn" data-lang="pt">Português</button>
+            <button class="lang-btn" data-lang="ja">日本語</button>
+            <button class="lang-btn" data-lang="ko">한국어</button>
         </div>
 
         <div class="footer-links">
             <a href="#privacy" data-i18n="privacy">Privacy Policy</a>
-            <a href="#credits" data-i18n="credits">Credits</a>
+            <a href="credits.html" data-i18n="credits">Credits</a>
         </div>
 
         <p class="copyright">
-            Made with <span style="color:red;">&hearts;</span> by <a href="mailto:aldhairvera15@gmail.com"
-                style="font-weight: bold;">Aldhair
+            Made with <span style="color:red;">&hearts;</span> by <a href="#" style="font-weight: bold;">Aldhair
                 Vera</a> <br>
             &copy; 2025 Cozy Pomodoro.
         </p>
@@ -381,55 +333,9 @@
         <audio id="audio-player"></audio>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content" alt="Enlarged view">
-    </div>
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="lightbox-modal" onclick="closePrivacyMock()"
-        style="display: none; align-items: flex-start; padding-top: 50px; overflow-y: auto;">
-        <div class="privacy-modal-card" onclick="event.stopPropagation()">
-            <span class="lightbox-close" onclick="closePrivacyMock()"
-                style="position: absolute; top: 15px; right: 20px; color: var(--text-main); font-size: 2rem; cursor: pointer;">&times;</span>
-            <div id="privacy-text" data-i18n="privacy_policy_full"
-                style="color: var(--text-main); text-align: left; line-height: 1.6;">
-                <!-- Content injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Credits Modal -->
-    <div id="credits-modal" class="lightbox-modal" onclick="closeCreditsMock()"
-        style="display: none; align-items: flex-start; padding-top: 50px; overflow-y: auto;">
-        <div class="privacy-modal-card" onclick="event.stopPropagation()">
-            <span class="lightbox-close" onclick="closeCreditsMock()"
-                style="position: absolute; top: 15px; right: 20px; color: var(--text-main); font-size: 2rem; cursor: pointer;">&times;</span>
-            <div id="credits-text" style="color: var(--text-main); text-align: center; line-height: 1.6;">
-                <!-- Content injected via JS -->
-            </div>
-        </div>
-    </div>
+    <div id="privacy" style="display:none;"></div>
 
     <script src="script.js"></script>
-    <!-- Swiper.js script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // Initialize Swiper
-        var swiper = new Swiper(".mySwiper", {
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            spaceBetween: 40, // Nice gap between images
-            loop: true,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            speed: 1000, // Smooth transition
-        });
-    </script>
 </body>
 
 </html>
