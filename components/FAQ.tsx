@@ -19,7 +19,7 @@ export default function FAQ() {
     ];
 
     return (
-        <section className="faq-section container reveal active" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+        <section className="faq-section container reveal" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
             <h2 className="section-title text-center" style={{ marginBottom: '2rem' }}>{t('faq_title')}</h2>
 
             <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>

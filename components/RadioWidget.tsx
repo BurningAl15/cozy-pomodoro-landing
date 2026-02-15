@@ -44,10 +44,6 @@ export default function RadioWidget() {
                 <button
                     onClick={togglePlay}
                     className="play-btn"
-                    style={{
-                        background: 'none', border: 'none', fontSize: '1.5rem',
-                        cursor: 'pointer', color: 'var(--primary-color)'
-                    }}
                 >
                     {isPlaying ? '⏸' : '▶'}
                 </button>

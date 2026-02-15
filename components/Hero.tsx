@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
+import StoreButton from './StoreButton';
+import { Apple, PlayCircle, Sparkles, Layout, Leaf, Palette } from 'lucide-react';
 
 const heroImages = [
-    // ... (truncated)
+    // ... (rest of the images)
     "alpine_marketing-carousel.webp", "autumn_warmth_marketing-carousel.webp",
     "calm_lake_marketing-carousel.webp", "city_lights_marketing-carousel.webp",
     "cosmic_vibe_marketing-carousel.webp", "cozy_cafe_marketing-carousel.webp",
@@ -35,37 +37,52 @@ export default function Hero() {
     return (
         <section className="hero container">
             <div className="hero-content">
-                <div className="hero-text">
-                    <span className="badge-soft">{t('version_badge')}</span>
+                <div className="hero-text reveal">
+                    <span className="badge-soft">
+                        <Sparkles size={14} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                        {t('version_badge')}
+                    </span>
                     <h1 className="hero-title">{t('hero_title')}</h1>
                     <p className="hero-subtitle">
                         <span>{t('hero_subtitle')}</span> <br />
                         <strong>{t('hero_subtitle_bold')}</strong>
                     </p>
                     <div className="hero-actions">
-                        <a href="https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
-                            target="_blank" className="cta-button primary" rel="noreferrer">{t('cta_download')}</a>
-                        {/* Note: anchor link might need handling if we want smooth scroll with Next Link, but standard hash works */}
-                        <a href="#theme-pack" className="cta-button secondary">{t('cta_explore')}</a>
+                        <StoreButton platform="android" />
+                        <StoreButton platform="ios" />
                     </div>
-                    <p className="hero-note">{t('hero_note')}</p>
+                    {/* Explore link as a clean sub-action */}
+                    <div style={{ marginTop: '24px' }}>
+                        <a href="#theme-pack" className="nav-link" style={{ fontSize: '0.95rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--primary-color)' }}>
+                            {t('cta_explore')} <span>→</span>
+                        </a>
+                    </div>
+                    <p className="hero-note" style={{ marginTop: '24px' }}>{t('hero_note')}</p>
 
                     {/* Theme Switcher Mini */}
-                    <div className="theme-switcher-mini">
-                        <p className="theme-label-sm">{t('try_theme')}</p>
-                        <div className="theme-buttons">
+                    <div className="theme-switcher-mini" style={{ marginTop: '40px' }}>
+                        <p className="theme-label-sm" style={{ marginBottom: '12px', fontSize: '0.85rem', fontWeight: 600, opacity: 0.8 }}>{t('try_theme')}</p>
+                        <div className="theme-buttons" style={{ display: 'flex', gap: '12px' }}>
                             <button className="theme-btn" onClick={() => setTheme('cozyLight')} title="Cozy Light"
-                                style={{ backgroundColor: '#ff5722' }}></button>
+                                style={{ backgroundColor: '#ffffff', border: '1px solid #ddd', width: '36px', height: '36px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Layout size={18} color="#ff5722" />
+                            </button>
                             <button className="theme-btn" onClick={() => setTheme('cozyDark')} title="Cozy Dark"
-                                style={{ backgroundColor: '#333', borderColor: '#555' }}></button>
+                                style={{ backgroundColor: '#1a1a1a', border: '1px solid #333', width: '36px', height: '36px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Layout size={18} color="#ff7043" />
+                            </button>
                             <button className="theme-btn" onClick={() => setTheme('nature')} title="Nature"
-                                style={{ backgroundColor: '#2E4033' }}></button>
+                                style={{ backgroundColor: '#f1f8e9', border: '1px solid #a5d6a7', width: '36px', height: '36px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Leaf size={18} color="#2e7d32" />
+                            </button>
                             <button className="theme-btn" onClick={() => setTheme('pastel')} title="Pastel"
-                                style={{ backgroundColor: '#FFB7B2' }}></button>
+                                style={{ backgroundColor: '#fff5f8', border: '1px solid #f8bbd0', width: '36px', height: '36px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Palette size={18} color="#d81b60" />
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div className="hero-visual">
+                <div className="hero-visual reveal">
                     <img src={`assets/carousel/${heroImage}`} alt="Cozy Pomodoro App"
                         className="hero-mockup animate-float" />
                 </div>

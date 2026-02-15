@@ -18,31 +18,41 @@ export default function Footer() {
 
     return (
         <footer className="footer container">
-            <div className="footer-links" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
-                <Link href="/privacy" className="cta-button secondary" style={{ fontSize: '0.9rem', padding: '10px 20px' }}>
+            <div className="footer-links">
+                <Link href="/privacy" className="nav-link">
                     {t('nav_privacy')}
                 </Link>
-                <Link href="/credits" className="cta-button secondary" style={{ fontSize: '0.9rem', padding: '10px 20px' }}>
+                <Link href="/terms" className="nav-link">
+                    {t('nav_terms')}
+                </Link>
+                <Link href="/rating" className="nav-link">
+                    {t('nav_rating')}
+                </Link>
+                <Link href="/credits" className="nav-link">
                     {t('credits')}
+                </Link>
+                <Link href="/support" className="nav-link">
+                    {t('nav_support')}
                 </Link>
             </div>
 
-            <div className="languages-list" style={{ marginBottom: '2rem' }}>
+            <div className="languages-list" style={{ marginTop: '3rem' }}>
                 {languages.map(lang => (
                     <button
                         key={lang.code}
                         className={`lang-btn ${language === lang.code ? 'active' : ''}`}
                         onClick={() => setLanguage(lang.code as any)}
+                        style={{ border: 'none' }}
                     >
                         {lang.label}
                     </button>
                 ))}
             </div>
 
-            <p className="copyright">
-                <span>{t('footer_made_with')}</span> <span style={{ color: 'red' }}>&hearts;</span> <span>{t('footer_by')}</span> <a href="mailto:aldhairvera15@gmail.com"
-                    style={{ fontWeight: 'bold' }}>Aldhair Vera</a> <br />
-                &copy; 2025 Cozy Pomodoro.
+            <p className="copyright" style={{ marginTop: '4rem', opacity: 0.6 }}>
+                <span>{t('footer_made_with')}</span> <span style={{ color: '#ff5e3a' }}>&hearts;</span> <span>{t('footer_by')}</span> <a href="mailto:aldhairvera15@gmail.com"
+                    style={{ fontWeight: '600', color: 'inherit' }}>Aldhair Vera</a> <br />
+                &copy; 2026 Cozy Pomodoro.
             </p>
         </footer>
     )
