@@ -5,6 +5,8 @@ interface StoreButtonProps {
 }
 
 export default function StoreButton({ platform }: StoreButtonProps) {
+    if (platform === 'ios') return null; // Temporarily hide iOS badge until Apple review approves v1.3.1
+
     const link = platform === 'android'
         ? "https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
         : "#"; // Update with real App Store URL later

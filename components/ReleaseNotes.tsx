@@ -24,8 +24,8 @@ export default function ReleaseNotes() {
                     >
                         <div className="release-title">
                             <span className="release-emoji">✨</span>
-                            <span>{t('whats_new')}</span>
-                            <span className="version-badge primary">v1.3.0</span>
+                            <span className="release-title-text">{t('whats_new')}</span>
+                            <span className="version-badge primary">V1.3.1</span>
                         </div>
                         <motion.div
                             animate={{ rotate: openIndex === 0 ? 180 : 0 }}
@@ -45,7 +45,32 @@ export default function ReleaseNotes() {
                                 style={{ overflow: 'hidden' }}
                             >
                                 <div className="release-content">
-                                    <p dangerouslySetInnerHTML={{ __html: t('release_notes_v130') }} />
+                                    <ul className="release-list">
+                                        {t('release_notes_v130').split('<br>').map((item, i) => {
+                                            const [title, ...descParts] = item.split(':');
+                                            const desc = descParts.join(':').trim();
+                                            return (
+                                                <motion.li
+                                                    key={i}
+                                                    className="release-item"
+                                                    initial={{ opacity: 0, x: -10 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: i * 0.1 }}
+                                                >
+                                                    <div className="release-item-text">
+                                                        {desc ? (
+                                                            <>
+                                                                <b>{title.trim()}</b>
+                                                                <span>{desc}</span>
+                                                            </>
+                                                        ) : (
+                                                            <span>{item}</span>
+                                                        )}
+                                                    </div>
+                                                </motion.li>
+                                            );
+                                        })}
+                                    </ul>
                                 </div>
                             </motion.div>
                         )}
@@ -61,9 +86,9 @@ export default function ReleaseNotes() {
                         whileTap={{ scale: 0.99 }}
                     >
                         <div className="release-title">
-                            <span className="release-emoji">🔥</span>
-                            <span>{t('whats_new')}</span>
-                            <span className="version-badge">v1.2.0</span>
+                            <span className="release-emoji">✨</span>
+                            <span className="release-title-text">{t('whats_new')}</span>
+                            <span className="version-badge">V1.2.0</span>
                         </div>
                         <motion.div
                             animate={{ rotate: openIndex === 1 ? 180 : 0 }}
@@ -83,7 +108,32 @@ export default function ReleaseNotes() {
                                 style={{ overflow: 'hidden' }}
                             >
                                 <div className="release-content">
-                                    <p dangerouslySetInnerHTML={{ __html: t('release_notes_v120') }} />
+                                    <ul className="release-list">
+                                        {t('release_notes_v120').split('<br>').map((item, i) => {
+                                            const [title, ...descParts] = item.split(':');
+                                            const desc = descParts.join(':').trim();
+                                            return (
+                                                <motion.li
+                                                    key={i}
+                                                    className="release-item"
+                                                    initial={{ opacity: 0, x: -10 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: i * 0.1 }}
+                                                >
+                                                    <div className="release-item-text">
+                                                        {desc ? (
+                                                            <>
+                                                                <b>{title.trim()}</b>
+                                                                <span>{desc}</span>
+                                                            </>
+                                                        ) : (
+                                                            <span>{item}</span>
+                                                        )}
+                                                    </div>
+                                                </motion.li>
+                                            );
+                                        })}
+                                    </ul>
 
                                     <div className="critical-update-section">
                                         <h3>{t('critical_title')}</h3>

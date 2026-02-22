@@ -52,7 +52,7 @@ export default function Footer() {
             <p className="copyright" style={{ marginTop: '4rem', opacity: 0.6 }}>
                 <span>{t('footer_made_with')}</span> <span style={{ color: '#ff5e3a' }}>&hearts;</span> <span>{t('footer_by')}</span> <a href="mailto:aldhairvera15@gmail.com"
                     style={{ fontWeight: '600', color: 'inherit' }}>Aldhair Vera</a> <br />
-                &copy; 2026 Cozy Pomodoro.
+                &copy; 2025 Cozy Pomodoro.
             </p>
         </footer>
     )
