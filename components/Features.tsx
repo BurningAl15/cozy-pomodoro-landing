@@ -27,6 +27,7 @@ export default function Features() {
 
             {/* Features Grid */}
             <section className="section container reveal" style={{ paddingTop: '0' }}>
+                <h2 className="visually-hidden">App Features</h2>
                 <div className="features-grid">
                     {/* Feature 1 */}
                     <div className="feature-card-lg">

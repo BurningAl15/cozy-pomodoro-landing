@@ -113,6 +113,19 @@ ul {
   display: none !important;
 }
 
+/* Screen reader only - visually hidden but accessible */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Badges */
 .badge-soft {
   display: inline-block;
@@ -1231,8 +1244,32 @@ ul {
   }
 
   .hero-content {
+    grid-template-columns: 1fr;
     gap: 30px;
-    padding-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    overflow: visible;
+    order: -1;
+    /* image above text on mobile */
+  }
+
+  .hero-mockup {
+    width: 75% !important;
+    max-width: 320px !important;
+    margin: 0 auto;
+  }
+
+  .theme-switcher-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   body {

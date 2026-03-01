@@ -36,12 +36,14 @@ export default function Footer() {
                 </Link>
             </div>
 
-            <div className="languages-list" style={{ marginTop: '3rem' }}>
+            <div className="languages-list" role="group" aria-label="Select language" style={{ marginTop: '3rem' }}>
                 {languages.map(lang => (
                     <button
                         key={lang.code}
                         className={`lang-btn ${language === lang.code ? 'active' : ''}`}
                         onClick={() => setLanguage(lang.code as any)}
+                        aria-label={`Switch language to ${lang.label}`}
+                        aria-current={language === lang.code ? 'true' : undefined}
                         style={{ border: 'none' }}
                     >
                         {lang.label}
