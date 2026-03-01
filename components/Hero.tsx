@@ -92,16 +92,16 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="hero-visual reveal">
-                    {/* LCP element: use Next.js Image with priority for fast loading */}
+                    {/* LCP element: Next.js Image optimizer serves responsive sizes */}
                     <Image
                         src={`/assets/carousel/${heroImage}`}
                         alt="Cozy Pomodoro App – productivity timer with beautiful themes"
                         className="hero-mockup animate-float"
                         width={420}
-                        height={420}
+                        height={560}
                         priority
+                        sizes="(max-width: 768px) 75vw, 42vw"
                         style={{ width: '90%', maxWidth: '420px', height: 'auto' }}
-                        unoptimized
                     />
                 </div>
             </div>
