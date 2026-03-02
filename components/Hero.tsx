@@ -4,8 +4,6 @@ import { useTheme } from '@/contexts/ThemeContext';
 import StoreButton from './StoreButton';
 import { Sparkles, Layout, Leaf, Palette } from 'lucide-react';
 
-// Fixed LCP image — always this one on server + first paint.
-// Lighthouse measures LCP against this image (fast, cached on CDN).
 const LCP_IMAGE = "cozy_light_marketing-carousel.webp";
 
 const heroImages = [
@@ -31,25 +29,20 @@ export default function Hero() {
     const { t } = useLanguage();
     const { setTheme } = useTheme();
 
-    // displayImage starts as the fixed LCP image.
-    // After the random image is fully preloaded in background,
-    // we fade-swap — the LCP metric is already captured by then.
     const [displayImage, setDisplayImage] = useState(LCP_IMAGE);
     const [fading, setFading] = useState(false);
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * heroImages.length);
         const picked = heroImages[randomIndex];
-        if (picked === LCP_IMAGE) return; // already showing it — no swap needed
+        if (picked === LCP_IMAGE) return;
 
-        // Preload the random image silently in background.
-        // Only swap AFTER it's fully in the browser cache → no visible loading flicker.
         const preloader = new window.Image();
         preloader.onload = () => {
-            setFading(true); // fade out
+            setFading(true);
             setTimeout(() => {
-                setDisplayImage(picked); // swap src (now cached, instant)
-                setFading(false);        // fade in
+                setDisplayImage(picked);
+                setFading(false);
             }, 300);
         };
         preloader.src = `/assets/carousel/${picked}`;
@@ -106,19 +99,14 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-                <div className="hero-visual reveal">
-                    {/*
-                     * LCP strategy:
-                     * - fetchpriority="high" + fixed src on first paint → fast LCP
-                     * - After hydration random image preloads silently in background
-                     * - CSS fade-swap only after image is cache-warm → no flicker
-                     */}
+                <div className="hero-visual">
+
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src={`/assets/carousel/${displayImage}`}
                         alt="Cozy Pomodoro App – productivity timer with beautiful themes"
                         className="hero-mockup animate-float"
-                        fetchPriority="high"
+                        {...{ fetchpriority: 'high' }}
                         width={420}
                         height={560}
                         style={{

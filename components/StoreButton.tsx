@@ -36,6 +36,8 @@ export default function StoreButton({ platform }: StoreButtonProps) {
             <img
                 src={badgeSrc}
                 alt={altText}
+                width={124}
+                height={48}
                 style={{
                     height: '100%',
                     width: 'auto',
