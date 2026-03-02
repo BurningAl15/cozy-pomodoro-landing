@@ -33,6 +33,14 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Preload LCP hero image — browser fetches before JS/React executes */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/carousel/cozy_light_marketing-carousel.webp"
+          type="image/webp"
+        />
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
