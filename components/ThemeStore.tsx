@@ -117,7 +117,7 @@ export default function ThemeStore() {
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
                         {packThemes.pack01.map((theme, i) => (
                             <div key={i} className="glass-badge" style={{ padding: '4px', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} style={{ width: '100%', borderRadius: '4px', display: 'block' }} />
+                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} loading="lazy" width={69} height={144} style={{ width: '100%', height: 'auto', borderRadius: '4px', display: 'block' }} />
                             </div>
                         ))}
                     </div>
@@ -145,7 +145,7 @@ export default function ThemeStore() {
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
                         {packThemes.pack02.map((theme, i) => (
                             <div key={i} className="glass-badge" style={{ padding: '4px', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} style={{ width: '100%', borderRadius: '4px', display: 'block' }} />
+                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} loading="lazy" width={97} height={205} style={{ width: '100%', height: 'auto', borderRadius: '4px', display: 'block' }} />
                             </div>
                         ))}
                     </div>
@@ -173,7 +173,7 @@ export default function ThemeStore() {
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
                         {packThemes.pack03.map((theme, i) => (
                             <div key={i} className="glass-badge" style={{ padding: '4px', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} style={{ width: '100%', borderRadius: '4px', display: 'block' }} />
+                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} loading="lazy" width={97} height={205} style={{ width: '100%', height: 'auto', borderRadius: '4px', display: 'block' }} />
                             </div>
                         ))}
                     </div>
@@ -210,7 +210,7 @@ export default function ThemeStore() {
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
                         {packThemes.pack04.map((theme, i) => (
                             <div key={i} className="glass-badge" style={{ padding: '4px', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} style={{ width: '100%', borderRadius: '4px', display: 'block' }} />
+                                <img src={`assets/${theme.img}`} alt={theme.name} title={theme.name} loading="lazy" width={69} height={144} style={{ width: '100%', height: 'auto', borderRadius: '4px', display: 'block' }} />
                             </div>
                         ))}
                     </div>
@@ -249,7 +249,7 @@ export default function ThemeStore() {
                         {allThemes.map((img, index) => (
                             <SwiperSlide key={index}>
                                 <div style={{ position: 'relative' }}>
-                                    <img src={`assets/carousel/${img}`} alt={`Theme Preview ${index}`} style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-lg)' }} />
+                                    <img src={`assets/carousel/${img}`} alt={`Theme Preview ${index}`} loading="lazy" width={372} height={372} style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-lg)' }} />
                                 </div>
                             </SwiperSlide>
                         ))}
