@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Cozy Pomodoro — Landing Page
 
-## Getting Started
+Marketing landing page for the **Cozy Pomodoro** iOS/Android app.
 
-First, run the development server:
+🌐 **Live:** [cozy-pomodoro-landing.vercel.app](https://cozy-pomodoro-landing.vercel.app)
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (Pages Router) |
+| Language | TypeScript |
+| Styling | Vanilla CSS + CSS custom properties |
+| i18n | Custom `translations.ts` — 8 languages, React Context |
+| Carousel | Swiper.js (EffectCards + Autoplay) |
+| Icons | Lucide React |
+| Deployment | Vercel (auto-deploy on push to `main`) |
+
+## Lighthouse Scores
+
+| | Mobile | Desktop |
+|--|--------|---------|
+| 🟢 Performance | **100** | **99** |
+| 🟢 Accessibility | **95** | **95** |
+| 🟢 Best Practices | **100** | **100** |
+| 🟢 SEO | **100** | **100** |
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Main landing (Hero, Features, Theme Store, FAQ) |
+| `/privacy` | Privacy Policy (8 locales) |
+| `/terms` | Terms of Service |
+| `/rating` | Age Rating explanation |
+| `/credits` | Music credits / attribution |
+| `/support` | Help center |
+
+## Supported Languages
+
+🇺🇸 English · 🇪🇸 Español · 🇧🇷 Português · 🇩🇪 Deutsch · 🇫🇷 Français · 🇮🇹 Italiano · 🇯🇵 日本語 · 🇰🇷 한국어
+
+## Performance Architecture
+
+- **LCP image** (`cozy_light`) preloaded via `<link rel="preload">` in document head
+- **Hero image randomization** — fixed LCP image on first paint, random image silently preloaded via `new Image()` and faded in after cache-warm (no double download penalty)
+- **Google Fonts** loaded async via `media="print"` → `onLoad` swap (zero render-blocking)
+- **ThemeStore images** — `loading="lazy"` with explicit `width`/`height` on all 27 images
+- **JSON-LD** `SoftwareApplication` schema for Google Rich Results
+- **Open Graph + Twitter Card** meta tags
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+components/     # Hero, Features, ThemeStore, Footer, Layout, ...
+pages/          # index.tsx, privacy, terms, rating, credits, support
+locales/        # translations.ts (all 8 languages)
+styles/         # globals.css
+public/assets/  # carousel images, theme thumbnails, badges
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Related
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **App:** [`../CozyApp/`](../CozyApp/) — Flutter mobile app (iOS + Android)
+- **Overview:** [`../PROJECT_OVERVIEW.md`](../PROJECT_OVERVIEW.md) — Full project documentation
