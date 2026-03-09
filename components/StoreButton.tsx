@@ -5,11 +5,9 @@ interface StoreButtonProps {
 }
 
 export default function StoreButton({ platform }: StoreButtonProps) {
-    if (platform === 'ios') return null; // Temporarily hide iOS badge until Apple review approves v1.3.1
-
     const link = platform === 'android'
         ? "https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
-        : "#"; // Update with real App Store URL later
+        : "https://apps.apple.com/app/id6759178972";
 
     const badgeSrc = platform === 'android'
         ? "/assets/google-play-badge.png"
@@ -19,6 +17,8 @@ export default function StoreButton({ platform }: StoreButtonProps) {
         ? "Get it on Google Play"
         : "Download on the App Store";
 
+    const height = platform === 'android' ? '54px' : '40px';
+
     return (
         <a
             href={link}
@@ -27,7 +27,7 @@ export default function StoreButton({ platform }: StoreButtonProps) {
             className="store-badge-link"
             style={{
                 display: 'inline-block',
-                height: '48px',
+                height: height,
                 transition: 'transform 0.2s ease',
             }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -36,8 +36,6 @@ export default function StoreButton({ platform }: StoreButtonProps) {
             <img
                 src={badgeSrc}
                 alt={altText}
-                width={124}
-                height={48}
                 style={{
                     height: '100%',
                     width: 'auto',
