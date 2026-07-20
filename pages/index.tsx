@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ReleaseNotes from "@/components/ReleaseNotes";
 import Features from "@/components/Features";
 import ThemeStore from "@/components/ThemeStore";
+import StudioApps from "@/components/StudioApps";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -17,6 +18,7 @@ export default function Home() {
       <ReleaseNotes />
       <Features />
       <ThemeStore />
+      <StudioApps />
       <FAQ />
       <Footer />
     </Layout>

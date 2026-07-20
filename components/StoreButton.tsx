@@ -1,13 +1,12 @@
 import React from 'react';
-
+import { useStoreLinks } from '@/hooks/useAppRegistry';
 interface StoreButtonProps {
     platform: 'android' | 'ios';
 }
 
 export default function StoreButton({ platform }: StoreButtonProps) {
-    const link = platform === 'android'
-        ? "https://play.google.com/store/apps/details?id=com.fatcatgamestudio.cozypomodoro"
-        : "https://apps.apple.com/app/id6759178972";
+    const links = useStoreLinks('cozyPomodoro');
+    const link = links[platform];
 
     const badgeSrc = platform === 'android'
         ? "/assets/google-play-badge.png"
@@ -18,6 +17,8 @@ export default function StoreButton({ platform }: StoreButtonProps) {
         : "Download on the App Store";
 
     const height = platform === 'android' ? '54px' : '40px';
+
+    if (!link) return null;
 
     return (
         <a
