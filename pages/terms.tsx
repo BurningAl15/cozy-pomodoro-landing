@@ -1,8 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import PageTemplate from '@/components/PageTemplate';
+import { termsContent } from '@/locales/legalContent';
 
 export default function Terms() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
         <PageTemplate
@@ -10,7 +11,7 @@ export default function Terms() {
             badge={t('badge_terms')}
             icon="📄"
         >
-            <div dangerouslySetInnerHTML={{ __html: t('terms_html') }} />
+            <div dangerouslySetInnerHTML={{ __html: termsContent[language] }} />
         </PageTemplate>
     );
 }
