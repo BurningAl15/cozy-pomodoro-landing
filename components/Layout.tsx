@@ -15,7 +15,7 @@ const SITE_URL = 'https://cozy-pomodoro-landing.vercel.app';
 export default function Layout({
     children,
     title = 'Cozy Pomodoro – Focus Comfortably',
-    description = 'A minimalist Pomodoro timer for calm productivity. Full experience is free. No ads, no subscriptions.',
+    description = 'A cozy Pomodoro timer with a free core experience, optional theme purchases, cloud sync, and no ads.',
 }: Props) {
     return (
         <>

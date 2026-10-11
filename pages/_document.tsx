@@ -7,22 +7,9 @@ export default function Document() {
     "name": "Cozy Pomodoro",
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": ["Android", "iOS"],
-    "description": "A minimalist Pomodoro timer for calm productivity. Full experience is free. No ads, no subscriptions.",
+    "description": "A minimalist Pomodoro timer with a free core experience, optional theme purchases, cloud sync, and no ads.",
     "url": "https://cozy-pomodoro-landing.vercel.app",
-    "offers": [
-      {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "name": "Free tier"
-      },
-      {
-        "@type": "Offer",
-        "price": "0.79",
-        "priceCurrency": "USD",
-        "name": "Individual themes"
-      }
-    ],
+    "offers": [{ "@type": "Offer", "name": "Free core experience" }],
     "author": {
       "@type": "Person",
       "name": "Aldhair Vera",

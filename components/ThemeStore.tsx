@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCards } from 'swiper/modules';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { priceDisclosure } from '@/locales/productContent';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -75,7 +76,7 @@ const packThemes = {
 };
 
 export default function ThemeStore() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [selectedPack, setSelectedPack] = useState<keyof typeof themePacks>("pack01");
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -86,6 +87,9 @@ export default function ThemeStore() {
                 <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('premium_title')}</h2>
                 <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-muted)' }}>
                     {t('premium_desc')}
+                </p>
+                <p style={{ maxWidth: '600px', margin: '0.75rem auto 0', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                    {priceDisclosure[language]}
                 </p>
             </div>
 
@@ -111,7 +115,6 @@ export default function ThemeStore() {
                         <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{t('card1_title')}</h3>
                     </div>
                     <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('card1_benefit')}</p>
-                    <div className="price" style={{ fontSize: '2.5rem' }}><span className="currency">$</span>2.99</div>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{t('card1_desc')}</p>
 
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
@@ -139,7 +142,6 @@ export default function ThemeStore() {
                         <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{t('card2_title')}</h3>
                     </div>
                     <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('card2_benefit')}</p>
-                    <div className="price" style={{ fontSize: '2.5rem' }}><span className="currency">$</span>2.99</div>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{t('card2_desc')}</p>
 
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
@@ -167,7 +169,6 @@ export default function ThemeStore() {
                         <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{t('card3_title')}</h3>
                     </div>
                     <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('card3_benefit')}</p>
-                    <div className="price" style={{ fontSize: '2.5rem' }}><span className="currency">$</span>2.99</div>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{t('card3_desc')}</p>
 
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
@@ -204,7 +205,6 @@ export default function ThemeStore() {
                         <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: 'var(--text-main)' }}>{t('card4_title')}</h3>
                     </div>
                     <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('card4_benefit')}</p>
-                    <div className="price" style={{ fontSize: '2.5rem' }}><span className="currency">$</span>3.49</div>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{t('card4_desc')}</p>
 
                     <div className="pack-contents-mini" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
@@ -224,7 +224,7 @@ export default function ThemeStore() {
                         </div>
                         <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{t('single_themes_title')}</h3>
                     </div>
-                    <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('one_time')} $0.79</p>
+                    <p style={{ color: 'var(--primary-color)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1rem' }}>{t('one_time')}</p>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{t('single_themes_desc')}</p>
                 </div>
             </div>

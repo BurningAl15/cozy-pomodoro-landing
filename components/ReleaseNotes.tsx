@@ -2,9 +2,11 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { releaseNotes150 } from '@/locales/productContent';
 
 export default function ReleaseNotes() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const release = releaseNotes150[language];
     const [openIndex, setOpenIndex] = React.useState<number | null>(0);
 
     const toggle = (index: number) => {
@@ -14,7 +16,7 @@ export default function ReleaseNotes() {
     return (
         <section className="section container release-notes-section" style={{ paddingTop: 0, paddingBottom: '3rem' }}>
             <div className="reveal active" style={{ maxWidth: '650px', margin: '0 auto' }}>
-                {/* v1.3.0 Section */}
+                {/* v1.5.0 Section */}
                 <div className="release-card" style={{ marginBottom: '1rem' }}>
                     <motion.div
                         className={`release-header ${openIndex === 0 ? 'active' : ''}`}
@@ -24,8 +26,8 @@ export default function ReleaseNotes() {
                     >
                         <div className="release-title">
                             <span className="release-emoji">✨</span>
-                            <span className="release-title-text">{t('whats_new')}</span>
-                            <span className="version-badge primary">V1.3.1</span>
+                            <span className="release-title-text">{release.title}</span>
+                            <span className="version-badge primary">{t('version_badge')}</span>
                         </div>
                         <motion.div
                             animate={{ rotate: openIndex === 0 ? 180 : 0 }}
@@ -46,9 +48,7 @@ export default function ReleaseNotes() {
                             >
                                 <div className="release-content">
                                     <ul className="release-list">
-                                        {t('release_notes_v130').split('<br>').map((item, i) => {
-                                            const [title, ...descParts] = item.split(':');
-                                            const desc = descParts.join(':').trim();
+                                        {release.items.map((item, i) => {
                                             return (
                                                 <motion.li
                                                     key={i}
@@ -58,14 +58,7 @@ export default function ReleaseNotes() {
                                                     transition={{ delay: i * 0.1 }}
                                                 >
                                                     <div className="release-item-text">
-                                                        {desc ? (
-                                                            <>
-                                                                <b>{title.trim()}</b>
-                                                                <span>{desc}</span>
-                                                            </>
-                                                        ) : (
-                                                            <span>{item}</span>
-                                                        )}
+                                                        <span>{item}</span>
                                                     </div>
                                                 </motion.li>
                                             );
