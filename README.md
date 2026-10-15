@@ -18,14 +18,11 @@ Marketing landing page for the **Cozy Pomodoro** iOS/Android app.
 | Icons | Lucide React |
 | Deployment | Vercel (auto-deploy on push to `main`) |
 
-## Lighthouse Scores
+## Product and release copy
 
-| | Mobile | Desktop |
-|--|--------|---------|
-| 🟢 Performance | **100** | **99** |
-| 🟢 Accessibility | **95** | **95** |
-| 🟢 Best Practices | **100** | **100** |
-| 🟢 SEO | **100** | **100** |
+The homepage's 1.5.0 section is localized in `locales/productContent.ts`. It is intentionally labeled **Coming Soon** until the release is publicly available. Build 64 is currently Android internal testing; do not describe it as a production release before both stores are verified.
+
+The 1.5.0 copy covers iOS Live Activities, focus widgets, iOS music resume behavior, and the Android widget reliability fix. Android widget 64 passed emulator validation; physical-device confirmation is still pending. Keep this caveat in mind when preparing public campaigns.
 
 ## Pages
 
@@ -37,6 +34,7 @@ Marketing landing page for the **Cozy Pomodoro** iOS/Android app.
 | `/rating` | Age Rating explanation |
 | `/credits` | Music credits / attribution |
 | `/support` | Help center |
+| `/delete-account` | Account deletion instructions |
 
 ## Supported Languages
 
@@ -73,3 +71,5 @@ public/assets/  # carousel images, theme thumbnails, badges
 
 - **App:** [`../CozyApp/`](../CozyApp/) — Flutter mobile app (iOS + Android)
 - **Overview:** [`../PROJECT_OVERVIEW.md`](../PROJECT_OVERVIEW.md) — Full project documentation
+- **Current app state and QA:** [`../CozyApp/docs/COZY_PRODUCT_REFERENCE_2026-10-14.md`](../CozyApp/docs/COZY_PRODUCT_REFERENCE_2026-10-14.md)
+- **Verified marketing claims and post ideas:** [`../CozyApp/docs/MARKETING_FEATURES_AND_POSTS_2026-10-14.md`](../CozyApp/docs/MARKETING_FEATURES_AND_POSTS_2026-10-14.md)
